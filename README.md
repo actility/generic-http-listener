@@ -5,7 +5,7 @@ Example of a simple Java HTTP listener, useful for all ThingPark notifications a
 The program listens to all HTTP requests targeted to a specific port. By default that port is 8090, which means that ThingPark should be configured to target http://listenerhost:8090 to send its notifications and callbacks.
 
 All HTTP requests will be captured:
-- requests using methods GET, POST, PUT, PATCH or OPTIONS
+- requests using methods GET, POST, PUT, DELETE, PATCH or OPTIONS
 - requests targetting the root URI / or any other URI such as /subscribe, /post/some/body, etc
 - requests using query parameters (?param=xxx) or HTTP headers (Content-type, etc)
 - requests having a body
