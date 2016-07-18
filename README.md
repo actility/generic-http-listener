@@ -31,4 +31,4 @@ java -jar generic-http-listener.jar
 ```
 ### Customization
 The default HTTPS listening port and keystore properties can be changed in properties file `src/main/resources/application.properties`.
-The default HTTP listening port can be changed in Java file `com.actility.lab.generichttplistener.ServerRunner.java`.
+The default HTTP listening port can be changed in Java file `com.actility.lab.generichttplistener.ServerRunner`.
