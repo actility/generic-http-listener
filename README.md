@@ -2,7 +2,7 @@
 
 Example of a simple Java HTTP listener, useful for all ThingPark notifications and callbacks.
 
-The program listens to all HTTP requests targeted to a specific port. By default that port is 8090, which means that ThingPark should be configured to target http://listenerhost:8090 to send its notifications and callbacks.
+The program listens to all HTTP/HTTPS requests targeted to a specific port. By default that port is 9080 for HTTP and 9443 for HTTPS, which means that ThingPark should be configured to target http://listenerhost:9080 or https://listenerhost:9443 to send its notifications and callbacks.
 
 All HTTP requests will be captured:
 - requests using methods GET, POST, PUT, DELETE, PATCH or OPTIONS
@@ -10,8 +10,8 @@ All HTTP requests will be captured:
 - requests using query parameters (?param=xxx) or HTTP headers (Content-type, etc)
 - requests having a body
 
-For each HTTP request, all information above will be logged. The details of the last 10 requests can be accessed either in the listener logs, or by accessing the following GET URI e.g. with a browser:
-`http://listenerhost:8090/generic-http-listener/last-requests`
+For each HTTP request, all information above will be logged. The details of the last 10 requests can be accessed either in the listener logs, or by accessing the following GET URI e.g. with a browser with HTTP:
+`http://listenerhost:9080/generic-http-listener/last-requests`
 
 This listener can be used for demo purposes or to initiate your own specific ThingPark integration component.
 
@@ -30,4 +30,5 @@ Once the listener jar has been built, the following command can be used to start
 java -jar generic-http-listener.jar
 ```
 ### Customization
-The default listening port can be changed from 8090 to anything else by modifying file `src/main/resources/application.properties`.
+The default HTTPS listening port and keystore properties can be changed in properties file `src/main/resources/application.properties`.
+The default HTTP listening port can be changed in Java file `com.actility.lab.generichttplistener.ServerRunner.java`.
