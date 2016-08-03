@@ -14,7 +14,7 @@ public class ServerRunner {
 	public Integer port() {
 		// HTTP PORT
 		// TODO put it in the properties file next to HTTPS settings
-		return 9080;
+		return 1080;
 	}
 
 	@Bean

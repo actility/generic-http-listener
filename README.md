@@ -2,7 +2,7 @@
 
 Example of a simple Java HTTP listener, useful for all ThingPark notifications and callbacks.
 
-The program listens to all HTTP/HTTPS requests targeted to a specific port. By default that port is 9080 for HTTP and 9443 for HTTPS, which means that ThingPark should be configured to target http://listenerhost:9080 or https://listenerhost:9443 to send its notifications and callbacks.
+The program listens to all HTTP/HTTPS requests targeted to a specific port. By default that port is 1080 for HTTP and 1443 for HTTPS, which means that ThingPark should be configured to target http://listenerhost:1080 or https://listenerhost:1443 to send its notifications and callbacks.
 
 All HTTP requests will be captured:
 - requests using methods GET, POST, PUT, DELETE, PATCH or OPTIONS
@@ -11,7 +11,7 @@ All HTTP requests will be captured:
 - requests having a body
 
 For each HTTP request, all information above will be logged. The details of the last 10 requests can be accessed either in the listener logs, or by accessing the following GET URI e.g. with a browser with HTTP:
-`http://listenerhost:9080/generic-http-listener/last-requests`
+`http://listenerhost:1080/last-requests`
 
 This listener can be used for demo purposes or to initiate your own specific ThingPark integration component.
 

@@ -27,7 +27,7 @@ public class DefaultRestController {
 	 * @return String
 	 * @throws Exception
 	 */
-	@RequestMapping(path="/**", method={ 
+	@RequestMapping(value="/**", method={ 
 		RequestMethod.GET, 
 		RequestMethod.POST, 
 		RequestMethod.PUT, 
@@ -88,7 +88,7 @@ public class DefaultRestController {
 	 * @return String
 	 * @throws Exception
 	 */
-	@RequestMapping(path="/generic-http-listener/last-requests", method=RequestMethod.GET)
+	@RequestMapping(value="/last-requests", method=RequestMethod.GET)
 	public @ResponseBody String showLast10Requests(HttpServletRequest request) throws Exception {
 		
 		StringBuilder builder = new StringBuilder();		
